@@ -1,6 +1,10 @@
 import pickle
 import os
-##
+import logging
+
+logging.basicConfig(filename='zmones.log', level=logging.INFO, encoding='utf-8', format='%(asctime)')
+
+
 class Zmogus:
     def __init__(self, vardas, amzius):
         self.vardas = vardas
