@@ -2,8 +2,18 @@ import pickle
 import os
 import logging
 
-logging.basicConfig(filename='zmones.log', level=logging.INFO, encoding='utf-8', format='%(asctime)')
-
+def create_logger(file=__name__+'.log', name=__name__, level=logging.DEBUG):
+    logger = logging.getLogger(name)
+    logger.setLevel(level)
+    formatter = logging.Formatter()
+    file_handler = logging.FileHandler(file)
+    file_handler = setLevel(level)
+    file_handler = setFormater(formatter)
+    console_handler = logging.StreamHandler()
+    console_handler = setLevel(file_handler)
+    
+    logger.addHandler(file_handler)
+    return logger
 
 class Zmogus:
     def __init__(self, vardas, amzius):
