@@ -1,6 +1,6 @@
 import pickle
 import os
-
+##
 class Zmogus:
     def __init__(self, vardas, amzius):
         self.vardas = vardas
