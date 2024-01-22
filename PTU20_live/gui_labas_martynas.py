@@ -4,7 +4,7 @@ layout = [
     [sg.Text('Koks tavo vardas?')],
     [sg.Input(key = "-NAME-")],
     [
-        sg.Button('Passisveikinti', key = "-HELLO-"),
+        sg.Button('Pasisveikinti', key = "-HELLO-"),
         sg.Button('Atsisveikinti', key = "-BYE-"),
     ],
     [sg.Text(size=(40, 1), key ='-OUTPUT-')]
