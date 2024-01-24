@@ -9,7 +9,7 @@ layout = [
     ],
     [sg.Text(size=(40, 1), key ='-OUTPUT-')]
 ]
-
+#pakeitimas atnaujinimas
 window = sg.Window('LABAS', layout)
 
 while True:
