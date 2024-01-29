@@ -38,3 +38,4 @@ def generate_primes(end, start=1):
 
 if __name__ == "__main__":
     print(len(generate_primes(10000000)))
+    input('press ENTER to exit...:')
