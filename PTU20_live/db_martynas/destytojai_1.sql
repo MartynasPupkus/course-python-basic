@@ -1,10 +1,10 @@
 -- SQLite
-CREATE TABLE dėstytojai (
-  dėstytojo_id INTEGER PRIMARY KEY,
+CREATE TABLE destytojai (
+  id INTEGER PRIMARY KEY,
   vardas VARCHAR(50),
-  pavardė VARCHAR(50),
+  pavarde VARCHAR(50),
   skyrius VARCHAR(100),
-  el_paštas VARCHAR(50)
+  el_pastas VARCHAR(50)
 );
 
-DROP TABLE dėstytojai;
+DROP TABLE destytojai;
