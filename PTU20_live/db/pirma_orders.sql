@@ -66,3 +66,21 @@ SELECT orders.id, product.name, quantity, product.price, product.price * quantit
     FROM order_line
     JOIN orders ON order_id = orders.id
     JOIN product ON product_id = product.id;
+
+
+SELECT orders.id, orders.total, first_name, last_name
+    SUM(quantity * price) AS product_total,
+    SUM(quantity) AS line_quantity,
+    SUM(quantity * price) - orders.total AS discount_euro,
+    ROUND((SUM(quantity * price) - orders.total) /
+        SUM(quantity * price) * 100 || " %" AS discount 
+    FROM order_line
+    JOIN orders ON order_id = orders.id
+    JOIN product ON product_id = product.id
+    JOIN clients ON client_id = clients.id
+    GROUP BY order_id;
+
+SELECT * FROM order_line
+    JOIN orders ON order_id = orders.id
+    JOIN product ON product_id = product.id
+    JOIN clients ON client_id = clients.id
