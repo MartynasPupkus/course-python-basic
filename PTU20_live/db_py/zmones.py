@@ -62,6 +62,6 @@ if __name__ == "__main__":
             print_friends(connector, cursor)
         if choice.lower() in ["ff"]:
             find_by(connector, cursor, "first_name")
+    
 
-#000
     connector.close()
